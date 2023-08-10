@@ -489,13 +489,26 @@ section {
 }
 
 .resume .resume-item h4 {
-  line-height: 18px;
+  line-height: 22px;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #0563bb;
+  color: var(--grey-dark);
   margin-bottom: 10px;
+}
+
+.resume .resume-item[onclick],
+.resume .resume-item[onclick]:hover h4,
+.resume .resume-item h4[onclick]:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.resume .resume-item[onclick] h4,
+.resume .resume-item h4[onclick] {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 .resume .resume-item h5 {
@@ -901,6 +914,9 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact#contact {
+  padding: 60px 0 120px 0;
+}
 .contact .info {
   width: 100%;
   background: #fff;
